@@ -1,0 +1,704 @@
+body {
+  margin: 0;
+  background: #4A3854;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  overflow:visible ;
+}
+
+.background-box {
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+  width: 1050px;
+  height: 550px;
+  background-color: rgba(255, 221, 146, 0.05);
+  border-radius: 8px;
+  z-index: 0;
+  overflow: visible;
+
+  }
+  .background-box h2{
+    margin-top: 20px;
+    padding-top: 40px;
+  }
+
+.img1 {
+  position: absolute;
+  width: 440px;  /* Tamanho da imagem */
+  right: -40px;   /* Move para a esquerda */
+  top: 50%;      /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Garante o centro exato */
+  z-index: 1;
+  }
+  h1, h2, h3 {
+  color: #B388EB; /* Roxo neon */
+}
+p {
+  color: #e0e0e0; /* branco suave */
+}
+.logo1 {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  height: 250px; /* ajuste conforme quiser */
+  z-index: 1;
+}
+.conteudo {
+  position: absolute;
+  top: 180px;
+  left: 30px;
+  height: 200px; /* ajuste conforme quiser */
+  z-index: 1;
+}
+.botao-cta {
+  margin: 20px auto;
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #D5FF00; /* verde-neon da sua paleta */
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.botao-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #D5FF00;
+  color: #4A3854;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(213, 255, 0, 0.6);
+  animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(213, 255, 0, 0.5),
+                0 0 20px rgba(213, 255, 0, 0.3),
+                0 0 30px rgba(213, 255, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(213, 255, 0, 0.9),
+                0 0 40px rgba(213, 255, 0, 0.6),
+                0 0 60px rgba(213, 255, 0, 0.4);
+  }
+}
+
+
+
+.content {
+  width: 100px;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+     
+    }
+  .background-box-produtos {
+  position: relative;
+  padding-top: 10px;       /* aumenta espaço acima dos cards */
+  padding-bottom: 40px;     /* adiciona um pouco de espaço embaixo */
+  overflow: visible;
+  min-height: 550px;        /* garante espaço para os cards + imagem */
+  z-index: 0;
+}
+
+   .section-produtos {
+  position: relative;
+  min-height: 40vh;
+  overflow: visible; /* <- Isso é o mais importante */
+  z-index: 0;
+  margin-top: 140px;
+ }
+main.section-produtos {
+  margin-top: 50px; /* ou ajuste conforme necessário */
+  overflow: visible;
+  margin-top: 100px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: visible; /* <- PERMITE rolagem horizontal */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  padding-left: 100px;
+  padding-right: 100px;
+max-width: 1200px;
+margin: 0 auto;
+width: 100%
+}
+
+   .carousel::-webkit-scrollbar {
+  display: none;
+}
+ .carousel-container {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  max-width: 1200px;
+  margin: -50px auto;
+  padding: 2rem 0;
+  overflow: visible;
+  padding-top: 100px;
+}
+
+.carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 70px 2rem;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 200px;
+  width: 80px;
+  max-width: 220px;
+ 
+  height: 350px; /* altura maior para comportar o conteúdo */
+  background: #2B2B2B;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  padding-top: 50px; /* espaço para a imagem por cima */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s;
+
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  position: absolute;
+  top: -60px; /* sobe mais */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px; /* imagem mais larga */
+  height: 250px;
+  object-fit: contain;
+  border-radius: 20%;
+
+  z-index: 2;
+}
+.img-card1 {
+  width: 300px !important;
+  height: 270px !important;
+  top: -80px !important;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2;
+}
+.card1 {
+  padding-top: 200px !important; /* sobe o conteúdo todo */
+}
+
+.card1 p {
+  margin-top: -5px; /* sobe o texto */
+}
+
+.card1 .preco-botao {
+  margin-top: 0.1rem; /* encosta o botão */
+}
+
+
+.preco-botao {
+  display: inline-block;
+  margin-top: 3rem;
+  background:#D5FF00 ;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.preco-botao:hover {
+  background: #D5FF00;
+}
+
+
+
+
+.card h3 {
+  margin-top: 12rem; /* empurra pra baixo pra caber imagem */
+  font-size: 1.3rem;
+  color: #B388EB;
+  text-align: center;
+}
+
+.card p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  text-align: center;
+  margin: 10px 10px;
+  padding: 10 50px;
+  margin-top: 10rem
+}
+
+.card a {
+  margin-top: 0.3 rem;
+  background:#D5FF00 ;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+   box-shadow: 0 0 12px rgba(213, 255, 0, 0.6);
+  animation: neon-pulse 1.5s infinite alternate;
+}
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(213, 255, 0, 0.5),
+                0 0 20px rgba(213, 255, 0, 0.3),
+                0 0 30px rgba(213, 255, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(213, 255, 0, 0.9),
+                0 0 40px rgba(213, 255, 0, 0.6),
+                0 0 60px rgba(213, 255, 0, 0.4);
+  }
+}
+.card a:hover {
+  background: #B388EB;
+}
+
+
+
+
+    /* Mobile friendly tweaks */
+    @media (max-width: 600px) {
+      .card {
+        flex: 0 0 85%;
+      }
+    }
+    
+
+
+    .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background: #ddd;
+}
+
+.arrow-left {
+  left: -10px;
+}
+
+.arrow-right {
+  right: -10px;
+}
+
+  .extra-service {
+  padding: 20px 0;
+}
+.servico-web {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  width: 1050px;
+  margin: 8px auto;
+  padding: 1px;
+  position: relative;
+}
+
+.titulo-central {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color:#B388EB ; /* ajuste se necessário */
+
+}
+
+.box-servico {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.imagem-lateral {
+  flex: 1;
+    overflow: visible; /* <- importante para deixar a imagem "sair" */
+  position: relative;
+}
+
+.landingpage {
+  width: 120%;
+  height: auto;
+  margin-left: -10%;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
+}
+
+.texto-direita {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  color: #fff; /* ou o que estiver usando */
+   margin-top: -150px; /* <-- aqui você sobe o bloco */
+}
+
+.beneficios-landing {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2px;
+}
+
+.beneficios-landing li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.servico-web .botao-cta {
+  padding: 10px 0.2px;    /* botão menor */
+   width: 190px;
+  font-size: 0.9rem;    /* fonte menor */
+  margin-top: 10px;     /* espaço reduzido em cima */
+  border-radius: 8px;   /* mantém borda arredondada */
+  background-color: #D5FF00;  /* mantém cor */
+  color: #4A3854;            /* mantém cor do texto */
+  box-shadow: 0 0 10px rgba(213, 255, 0, 0.6);
+  transition: box-shadow 0.3s ease;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.servico-web .botao-cta:hover {
+  box-shadow: 0 0 20px rgba(213, 255, 0, 0.9);
+  background-color: #B388EB; /* efeito hover */
+  color: white;
+}
+/* Responsividade para telas menores (até 768px) */
+@media (max-width: 768px) {
+  .servico-web {
+    width: 90%; /* ocupa quase toda a tela no celular */
+    padding: 20px;
+  }
+
+  .box-servico {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .imagem-lateral {
+    margin-bottom: 30px;
+  }
+
+  .landingpage {
+    width: 100%;  /* Ajusta a imagem para a largura disponível */
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .texto-direita {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .beneficios-landing li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .botao-cta {
+    padding: 12px 24px;
+    width: 100%;  /* Botão ocupa toda a largura */
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade para telas pequenas (celular) */
+@media (max-width: 480px) {
+  .titulo-central {
+    font-size: 1.5rem; /* Ajuste de tamanho da fonte */
+    
+  }
+
+  .box-servico {
+    padding: 0 10px;
+  }
+
+  .texto-direita {
+    margin-top: -4rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .beneficios-landing li {
+    font-size: 0.9rem;
+  }
+
+  .botao-cta {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  margin: 20px auto; /* Isso vai centralizar o botão */
+  display: block;
+  padding: 12px 24px;
+  width: auto;
+  font-size: 1rem;
+}
+
+  }
+}
+
+
+
+/*footer*/
+.footer-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 10px  20px; /* 20px cima/baixo, 30px laterais */
+  position: relative;
+  height: auto;  /* Permitir que a altura seja ajustada automaticamente */
+  box-sizing: border-box;  /* Garantir que padding não afete a altura */
+
+   /* ajuste como preferir */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: white;
+  width: 100%;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.footer-logo p {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.footer-contato h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.footer-contato p {
+  margin: 2px 0;
+  color: #aaa;
+}
+
+.footer-contato a {
+  color: #25D366;
+  text-decoration: none;
+}
+
+.footer-contato a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .footer-box {
+    height: 150px; /* Ajuste conforme necessário */
+    padding: 20px 40px; /* Pode aumentar o padding se necessário */
+  }
+}
+
+@media (max-width: 768px) {
+  .background-box {
+    width: 90%; /* ocupa quase toda a tela no celular */
+    height: auto;
+    top: 0;
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .conteudo {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: auto;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .logo1 {
+    position: relative;
+    width: 150px;
+    height: auto;
+    top: 0;
+    left: 0;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+
+  .img1 {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto 0 auto;
+    top: 0;
+    transform: none;
+  }
+
+  .background-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .background-box p {
+    font-size: 1rem;
+  }
+
+  .botao-cta {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .background-box {
+  padding-bottom: 100px; /* Garante espaço após o conteúdo interno */
+}
+  .produtos {
+    padding: 40px 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 100px 10px;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .card .botao-cta {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+}
+
+}
+@media (max-width: 768px) {
+  .footer-box {
+    width: 90%; /* Garante que o footer ocupe 90% da largura na tela */
+    padding: 20px 15px;  /* Ajusta o padding */
+  }
+
+  .footer-content {
+    flex-direction: column; /* Empilha os itens do footer verticalmente */
+    align-items: center; /* Centraliza os itens */
+    gap: 15px; /* Diminui o espaço entre os itens */
+  }
+
+  .footer-logo img {
+    height: 80px; /* Ajusta o tamanho da logo para dispositivos móveis */
+  }
+
+  .footer-logo p {
+    font-size: 0.9rem; /* Ajuste do tamanho da fonte */
+  }
+
+  .footer-contato h4 {
+    font-size: 1rem; /* Ajuste do tamanho da fonte */
+  }
+
+  .footer-contato p {
+    font-size: 0.9rem; /* Ajuste do tamanho da fonte */
+  }
+
+  .footer-copy {
+    font-size: 0.8rem; /* Ajuste do tamanho da fonte */
+    margin-top: 20px; /* Ajuste da margem */
+  }
+}
+
