@@ -56,22 +56,7 @@ p {
   height: 200px; /* ajuste conforme quiser */
   z-index: 1;
 }
-.botao-cta {
-  margin: 20px auto;
-  position: relative;
-  display: block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #000;
-  color: #D5FF00; /* verde-neon da sua paleta */
-  text-decoration: none;
-  border: none;
-  border-radius: 12px;
-  font-weight: bold;
-  overflow: hidden;
-  z-index: 0;
-  cursor: pointer;
-}
+
 
 .botao-cta {
   display: inline-block;
@@ -85,6 +70,11 @@ p {
   transition: box-shadow 0.3s ease;
   box-shadow: 0 0 12px rgba(213, 255, 0, 0.6);
   animation: neon-pulse 1.5s infinite alternate;
+}
+.botao-cta:hover {
+  box-shadow: 0 0 20px rgba(213, 255, 0, 0.9);
+  background-color: #B388EB; /* efeito hover */
+  color: white;
 }
 
 @keyframes neon-pulse {
@@ -305,17 +295,7 @@ width: 100%
   background: #B388EB;
 }
 
-
-
-
-    /* Mobile friendly tweaks */
-    @media (max-width: 600px) {
-      .card {
-        flex: 0 0 85%;
-      }
-    }
-    
-
+   
 
     .arrow {
   position: absolute;
@@ -428,80 +408,6 @@ width: 100%
   background-color: #B388EB; /* efeito hover */
   color: white;
 }
-/* Responsividade para telas menores (até 768px) */
-@media (max-width: 768px) {
-  .servico-web {
-    width: 90%; /* ocupa quase toda a tela no celular */
-    padding: 20px;
-  }
-
-  .box-servico {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .imagem-lateral {
-    margin-bottom: 30px;
-  }
-
-  .landingpage {
-    width: 100%;  /* Ajusta a imagem para a largura disponível */
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  .texto-direita {
-    margin-top: 0;
-    text-align: center;
-  }
-
-  .beneficios-landing li {
-    font-size: 1rem;
-    margin-bottom: 5px;
-  }
-
-  .botao-cta {
-    padding: 12px 24px;
-    width: 100%;  /* Botão ocupa toda a largura */
-    font-size: 1rem;
-  }
-}
-
-/* Responsividade para telas pequenas (celular) */
-@media (max-width: 480px) {
-  .titulo-central {
-    font-size: 1.5rem; /* Ajuste de tamanho da fonte */
-    
-  }
-
-  .box-servico {
-    padding: 0 10px;
-  }
-
-  .texto-direita {
-    margin-top: -4rem;
-    padding: 0 10px;
-    text-align: center;
-  }
-
-  .beneficios-landing li {
-    font-size: 0.9rem;
-  }
-
-  .botao-cta {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  margin: 20px auto; /* Isso vai centralizar o botão */
-  display: block;
-  padding: 12px 24px;
-  width: auto;
-  font-size: 1rem;
-}
-
-  }
-}
-
 
 
 /*footer*/
@@ -568,20 +474,20 @@ width: 100%
   color: #666;
   margin-bottom: 0;
 }
-@media (min-width: 768px) {
-  .footer-box {
-    height: 150px; /* Ajuste conforme necessário */
-    padding: 20px 40px; /* Pode aumentar o padding se necessário */
-  }
-}
+
 
 @media (max-width: 768px) {
   .background-box {
-    width: 90%; /* ocupa quase toda a tela no celular */
-    height: auto;
-    top: 0;
-    padding: 40px 20px;
+    padding-bottom: 120px;
+    width: 70%;
+    height: 1040px;
+    top: 30px;
+    padding: 40px 20px ;
     flex-direction: column;
+    margin-top: 30px;
+    position: relative;
+    margin: 0 auto;
+ 
   }
 
   .conteudo {
@@ -594,13 +500,15 @@ width: 100%
   }
 
   .logo1 {
+   padding: 5px;
     position: relative;
-    width: 150px;
+    width: 200px;
     height: auto;
-    top: 0;
+    top: 1px;
     left: 0;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
+    margin-top: 20px;
   }
 
   .img1 {
@@ -620,31 +528,67 @@ width: 100%
     font-size: 1rem;
   }
 
-  .botao-cta {
-    padding: 10px 16px;
+   .botao-mover{
+    display: inline-block;  /* Garantir que seja tratado como um bloco */
+   margin: 0 auto;  /* Centraliza horizontalmente */
+    padding: 5px 16px;
     font-size: 0.9rem;
     margin-top: 20px;
+    text-align: center;
+    margin-left: -25px;
+
+    background-color: #D5FF00; /* Cor de fundo do botão */
+    color: #4A3854;  /* Cor do texto */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;  /* Efeito de transição */
+
   }
+
+
+
+
+.background-box-produtos .titulo {
+  margin-top: 150px; /* Ajuste para dispositivos menores */
+ 
 }
-@media (max-width: 768px) {
-  .background-box {
-  padding-bottom: 100px; /* Garante espaço após o conteúdo interno */
+.titulo {
+ padding-top: 150px;
+ height: 2px;
 }
   .produtos {
-    padding: 40px 20px;
+    margin-top: 30px;
+    padding: 30px 20px;
+    margin: 10px;
+    padding-top: 10px;
+    
+  }
+  .section-produtos {
+   padding: 40px;
+    margin-bottom: 0.01rem; /* Adiciona espaço entre seções */
+    height: 1100px;
+    
   }
 
   .cards {
+    display: flex;
+    
     flex-direction: column;
     align-items: center;
     gap: 20px;
+   
+   
   }
 
   .card {
     width: 100%;
     max-width: 280px;
-    margin: 0 auto;
-    padding: 100px 10px;
+    margin: 0px auto;
+    padding: 50px 30px;
+    margin: 40px;
+  
+    
+  
   }
 
   .card img {
@@ -654,6 +598,7 @@ width: 100%
 
   .card h3 {
     font-size: 1.2rem;
+    margin-bottom: 10px
   }
 
   .card p {
@@ -665,13 +610,56 @@ width: 100%
     padding: 10px 16px;
   }
 
-}
 
-}
-@media (max-width: 768px) {
+   .servico-web {
+    width: 70%; /* ocupa quase toda a tela no celular */
+    padding: 20px;
+    height: 750px;
+  }
+
+  .box-servico {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  
+    
+  }
+
+  .imagem-lateral {
+    margin-bottom: 30px;
+  }
+
+  .landingpage {
+    width: 100%;  /* Ajusta a imagem para a largura disponível */
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .texto-direita {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .beneficios-landing li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .botao-web {
+    display: inline-block;  /* Garantir que seja tratado como um bloco */
+   margin: 0 auto;  /* Centraliza horizontalmente */
+    padding: 12px 24px;
+    width: 100%;  /* Botão ocupa toda a largura */
+    font-size: 1rem;
+    margin-right: 25px;
+  }
+
+
   .footer-box {
-    width: 90%; /* Garante que o footer ocupe 90% da largura na tela */
+    width: 80%; /* Garante que o footer ocupe 90% da largura na tela */
     padding: 20px 15px;  /* Ajusta o padding */
+    margin-top: 150px;
+    height: 350px;
   }
 
   .footer-content {
@@ -701,5 +689,4 @@ width: 100%
     margin-top: 20px; /* Ajuste da margem */
   }
 }
-
 
